@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="description" content/>
+		<meta name="author" content="Tommy Harding"/>
+		<meta name="robots" content="noarchive"/>
+		<title>Tommy Harding</title>
+		<!-- <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<style type="text/css">
+			body{
+				background-color: rgb(246,246,246);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-sm-12">
+					<div class="col-lg-12">
+						<h1>Welcome,</h1>
+					</div>
+					<div class="col-lg-12">
+						<ul>
+							<li>I'm a software developer</li>
+							<li>I live in Miami, FL</li>
+							<li>I work at <a href="http://www.ausum.net" target="_blank" rel="tooltip" title="Once you compare, the difference is AuSuM!"><strong>AuSuM Systems</strong></a></li>
+							<li>Languages I am currently using include:</li>
+							<ul>
+								<li>SQL</li>
+								<li>ColdFusion</li>
+								<li>JavaScript</li>
+							</ul>
+							<ul class="unstyled">
+								<li title="Java, PHP, HTML, CSS, and a bit of Object Pascal">(I know a few more too!)</li>
+							</ul>
+						</ul>
+					</div>
+					<div class="col-lg-12">
+						<p>
+							If you'd like to know more, have any questions, or inquires, shoot me an <a data-toggle="modal" data-target="#emailModal" rel="tooltip" title="tommy@tommyharding.com"><strong>email</strong></a>
+						</p>
+					</div>
+					<div class="col-lg-12">
+						<p>
+							Please don&apos;t mind the dust, This site is a work in progress
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<div class="col-lg-12">
+						<div class="col-lg-12">
+							<h3>Contact <!-- <span class="glyphicon glyphicon-collapse-up"></span> --></h3>
+						</div>
+					</div>
+					<div class="col-lg-11 col-lg-offset-1" data-toggle="modal" data-target="#emailModal" rel="tooltip" title="tommy@tommyharding.com">
+						<span class="glyphicon glyphicon-envelope" ></span> Email
+					</div>
+					<div class="col-lg-11 col-lg-offset-1">
+						<span class="glyphicon glyphicon-phone" ></span> 954-677-9807
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal window for Email -->
+		<div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="email" aria-hidden="true"> 
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h3>Email</h3>
+					</div>
+					<div class="modal-body">
+						<div class="form-hotizontal row">
+							<div class="form-group col-lg-12">
+								<label class="control-label" for="inputEmail">Your Email Address</label>
+								<div class="controls col-lg-12">
+									<input class="form-control" type="text" id="inputEmail" placeholder="address@email.com">
+								</div>
+							</div>
+							<div class="form-group col-lg-12">
+								<label class="control-label" for="inputSubject">Subject</label>
+								<div class="controls col-lg-12">
+									<input class="form-control" type="text" id="inputSubject" placeholder="Subject">
+								</div>
+							</div>
+							<div class="form-group col-lg-12">
+								<label class="control-label" for="inputMessage">Message</label>
+								<div class="controls col-lg-12">
+									<textarea class="form-control" rows="4" id="inputMessage" placeholder="Enter your Message here..."></textarea>
+								</div>
+							</div>
+							<div class="form-group"></div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn" onclick="sendMail();">Send</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/stats.js"></script>
+	<script type="text/javascript">
+		function sendMail(){
+			var wsEmail = $("#inputEmail").val();
+			var wsSub = $("#inputSubject").val();
+			var wsMsg = $("#inputMessage").val();
+			if(wsEmail != '' && wsMsg != ''){
+				$.post(
+					'sendEmail.php',
+					{psSendEmail:wsEmail, psSendMsg:wsMsg, psSubject:wsSub},
+					function(wsReturnData){
+						if(!wsReturnData.bErr){
+							$('input, textarea').val("");
+							$('#emailModal').modal('hide');
+						}
+						alert(wsReturnData.sMsg);
+					},
+					"json"
+				);
+			}
+		}
+	</script>
+</html>
