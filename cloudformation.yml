@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  'AWS::CloudFormation::Designer':
+    ad114793-4301-41f4-8900-f391a7a5bb88:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 212
+        'y': 74
+      z: 0
+Resources:
+  CDDC3WQ11:
+    Type: 'AWS::CodeDeploy::DeploymentConfig'
+    Properties:
+      TemplateURL: http://tommyharding.com.s3-website-us-east-1.amazonaws.com/cloudformation.yml
+      TimeoutInMinutes: '60'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: ad114793-4301-41f4-8900-f391a7a5bb88
