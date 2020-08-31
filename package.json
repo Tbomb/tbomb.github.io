@@ -2,14 +2,21 @@
   "name": "tommy-harding",
   "version": "1.0.0",
   "description": "Personal site by tommy harding",
-  "main": "/_site/HOME/index.html",
+  "main": "/_site/index.html",
   "dependencies": {
-    "node": "^14.8.0"
+    "autoprefixer": "^9.8.6",
+    "node": "^14.8.0",
+    "postcss-cli": "^7.1.1",
+    "postcss-nested": "^4.2.3",
+    "purgecss": "^2.3.0",
+    "tailwindcss": "^1.7.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  },
   "scripts": {
-    "test": "test",
-    "build": "eleventy --serve"
+    "test": "echo \"Error No test found\" && exit 1",
+    "build": "postcss css/tailwind.css -o _site/css/tailwind.css"
   },
   "repository": {
     "type": "git",
@@ -18,6 +25,8 @@
   "keywords": [
     "personal",
     "site",
+    "software",
+    "engineer",
     "resume",
     "tommy",
     "harding"

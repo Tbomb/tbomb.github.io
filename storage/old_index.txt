@@ -7,8 +7,8 @@
 		<meta name="robots" content="noarchive,follow"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Tommy Harding</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+		<!--
 		<style type="text/css">
 			body{
 				background-color: rgb(246,246,246);
@@ -31,6 +31,7 @@
 				color:#ff5792;
 			}
 		</style>
+		-->
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -94,7 +95,7 @@
 
 		<!-- Modal window for Email -->
 		<!--
-		<div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="email" aria-hidden="true"> 
+		<div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="email" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -132,33 +133,6 @@
 		</div>
 		-->
 	</body>
-	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
-	<script src="js/jquery-2.1.4.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/stats.js"></script>
-	<script type="text/javascript">
-	/*
-		function sendMail(){
-			var wsEmail = $("#inputEmail").val();
-			var wsSub = $("#inputSubject").val();
-			var wsMsg = $("#inputMessage").val();
-			if(wsEmail != '' && wsMsg != ''){
-				$.post(
-					'sendEmail.php',
-					{psSendEmail:wsEmail, psSendMsg:wsMsg, psSubject:wsSub},
-					function(wsReturnData){
-						if(!wsReturnData.bErr){
-							$('input, textarea').val("");
-							$('#emailModal').modal('hide');
-						}
-						alert(wsReturnData.sMsg);
-					},
-					"json"
-				);
-			}
-		}
-	*/
-	</script>
 	<!-- Google Tag Manager -->
 	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TXGL7R"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
