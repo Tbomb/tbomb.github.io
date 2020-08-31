@@ -4,12 +4,12 @@
   "description": "Personal site by tommy harding",
   "main": "/_site/HOME/index.html",
   "dependencies": {
-    "node": "^14.8.0",
-    "tailwindcss": "^1.7.6"
+    "node": "^14.8.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "eleventy --serve"
   },
   "repository": {
     "type": "git",

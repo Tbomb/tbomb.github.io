@@ -1,171 +1,41 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="description" content="Homepage of Tommy Harding; Software developer and programmer extraordinaire"/>
-		<meta name="author" content="Tommy Harding"/>
-		<meta name="robots" content="noarchive,follow"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Tommy Harding</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
-		<style type="text/css">
-			body{
-				background-color: rgb(246,246,246);
-			}
-			.emailLink{
-				cursor: pointer;
-			}
-			.linkText{
-				color:#000;
-				font-weight:600;
-				text-decoration: none;
-			}
-			.linkText:hover{
-				color:#000;
-				font-weight:600;
-				text-decoration: none;
-				font-style: italic;
-			}
-			.pink{
-				color:#ff5792;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container-fluid">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-8">
-						<div class="col-xs-12">
-							<h1>Welcome,</h1>
-						</div>
-						<div class="col-xs-12">
-							<ul>
-								<li>I&#39;m a software/web application developer</li>
-								<li>I live in Los Angeles, CA</li>
-								<li>I currently make things for <a href="http://justfab.com/" class="linkText">TechStyle</span></a></li>
-								<li>Technologies I am currently using include:</li>
-								<ul>
-									<li>ColdFusion</li>
-									<li>Java</li>
-									<li>SQL</li>
-									<li>.NET C#</li>
-									<li>Javascript</li>
-									<li>HTML5</li>
-									<li>CSS3</li>
-								</ul>
-								<ul class="unstyled">
-									<li title="PHP, and a bit of Object Pascal">(I know a few more too!)</li>
-								</ul>
-							</ul>
-						</div>
-						<div class="col-xs-12">
-							<p>
-								If you&#39;d like to know more, have any questions, or inquires, shoot me an <!--<a  class ="emailLink" data-toggle="modal" data-target="#emailModal">-->email at<strong> hello[at]tommyharding[dot]com</strong><!--</a>-->
-							</p>
-						</div>
-						<!-- <div class="col-lg-12">
-							<p>
-								Please don&#39;t mind the dust, This site is a work in progress
-							</p>
-						</div> -->
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<div class="col-xs-12">
-							<div class="col-xs-12">
-								<h3>Contact <!-- <span class="glyphicon glyphicon-collapse-up"></span> --></h3>
-							</div>
-						</div>
-						<!--<div class="col-xs-11 col-xs-offset-1 col-md-11 col-md-offset-1 emailLink" data-toggle="modal" data-target="#emailModal">-->
-						<div class="col-xs-11 col-xs-offset-1 col-md-11 col-md-offset-1 emailLink">
-							<span class="glyphicon glyphicon-envelope" ></span> hello[at]tommyharding[dot]com
-						</div>
-						<div class="col-xs-11 col-xs-offset-1 col-md-11 col-md-offset-1">
-							<span class="glyphicon glyphicon-phone" ></span> 954-677-9807
-						</div>
-						<div class="col-xs-11 col-xs-offset-1 col-md-11 col-md-offset-1">
-							<span class="glyphicon glyphicon-user" ></span><a href="http://www.linkedin.com/in/tommyharding/" style="text-decoration:none;"> LinkedIn</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<!-- Modal window for Email -->
-		<!--
-		<div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="email" aria-hidden="true"> 
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h3>Email</h3>
-					</div>
-					<div class="modal-body">
-						<div class="form-hotizontal row">
-							<div class="form-group col-xs-12">
-								<label class="control-label" for="inputEmail">Your Email Address</label>
-								<div class="controls col-xs-12">
-									<input class="form-control" type="text" id="inputEmail" placeholder="address@email.com">
-								</div>
-							</div>
-							<div class="form-group col-xs-12">
-								<label class="control-label" for="inputSubject">Subject</label>
-								<div class="controls col-xs-12">
-									<input class="form-control" type="text" id="inputSubject" placeholder="Subject">
-								</div>
-							</div>
-							<div class="form-group col-xs-12">
-								<label class="control-label" for="inputMessage">Message</label>
-								<div class="controls col-xs-12">
-									<textarea class="form-control" rows="4" id="inputMessage" placeholder="Enter your Message here..."></textarea>
-								</div>
-							</div>
-							<div class="form-group"></div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="submit" class="btn" onclick="sendMail();">Send</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		-->
-	</body>
-	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
-	<script src="js/jquery-2.1.4.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/stats.js"></script>
-	<script type="text/javascript">
-	/*
-		function sendMail(){
-			var wsEmail = $("#inputEmail").val();
-			var wsSub = $("#inputSubject").val();
-			var wsMsg = $("#inputMessage").val();
-			if(wsEmail != '' && wsMsg != ''){
-				$.post(
-					'sendEmail.php',
-					{psSendEmail:wsEmail, psSendMsg:wsMsg, psSubject:wsSub},
-					function(wsReturnData){
-						if(!wsReturnData.bErr){
-							$('input, textarea').val("");
-							$('#emailModal').modal('hide');
-						}
-						alert(wsReturnData.sMsg);
-					},
-					"json"
-				);
-			}
-		}
-	*/
-	</script>
-	<!-- Google Tag Manager -->
-	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TXGL7R"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-TXGL7R');</script>
-	<!-- End Google Tag Manager -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TommyHarding.com</title>
+  </head>
+  <body>
+    <div>
+    <div>Home</div>
+    <div>About</div>
+    <div>Projects</div>
+    <div>Blog</div>
+</div>
+    <h1>Welocome!</h1>
+<h2>About Me</h2>
+<p>My name is Tommy Harding,
+I am currently working on integrations at <a href="https://techstylefashiongroup.com/">TechStyle</a></p>
+<h3>Projects I Have Worked On</h3>
+<ul>
+<li>Integrate Google Analytics and Google Tab Manager to existing stores</li>
+<li>Integrate 3rd Party reporting for marketing insight</li>
+<li><a href="https://www.savagex.com">Savagex.com</a></li>
+<li>Payments Integrations</li>
+<li>Segment and Confluent Integrations</li>
+</ul>
+<h3>Technologies I Use</h3>
+<ul>
+<li>Java</li>
+<li>SQL</li>
+<li>Node.js</li>
+<li>Coldfusion</li>
+<li>Kafka</li>
+</ul>
+
+    <div>
+    <p>TommyHarding.com 2020</p>
+</div>
+  </body>
 </html>
