@@ -1,0 +1,31 @@
+{
+  "name": "tommy-harding",
+  "version": "1.0.0",
+  "description": "Personal site by tommy harding",
+  "main": "/_site/HOME/index.html",
+  "dependencies": {
+    "node": "^14.8.0",
+    "tailwindcss": "^1.7.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tbomb/tbomb.github.io.git"
+  },
+  "keywords": [
+    "personal",
+    "site",
+    "resume",
+    "tommy",
+    "harding"
+  ],
+  "author": "Tommy Harding",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tbomb/tbomb.github.io/issues"
+  },
+  "homepage": "https://github.com/Tbomb/tbomb.github.io#readme"
+}
