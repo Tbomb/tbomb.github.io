@@ -8,10 +8,13 @@ title: TommyHarding.com
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
+    <link href="/css/tailwind.css" rel="stylesheet"/>
   </head>
   <body>
-    {% include "components/menu.njk" %}
-    {{ content | safe }}
-    {% include "components/footer.njk" %}
+    {% include "partials/_header.njk" %}
+    <div id="content" class="flex px-8">
+      {{ content | safe }}
+    </div>
+    {% include "partials/_footer.njk" %}
   </body>
 </html>

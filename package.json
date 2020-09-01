@@ -16,7 +16,11 @@
   },
   "scripts": {
     "test": "echo \"Error No test found\" && exit 1",
-    "build": "postcss css/tailwind.css -o _site/css/tailwind.css"
+    "clean": "rm -rf _site/",
+    "eleventy:default": "eleventy",
+    "postcss:default": "postcss css/tailwind.css -o _site/css/tailwind.css",
+    "build": "npm run clean & npm run postcss:default & npm run eleventy:default",
+    "start:dev": "npm run build & npx eleventy --serve"
   },
   "repository": {
     "type": "git",

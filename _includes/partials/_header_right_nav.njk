@@ -1,0 +1,31 @@
+<nav class="flex items-center inline-flex min-w-full justify-between flex-wrap bg-purple-600">
+    <div class="flex flex-shrink-0 text-gray-200 mr-6">
+        <span class="font-semibold text-xl tracking-tight p-4">TommyHarding.com</span>
+    </div>
+
+    <div class="justify-end block px-4">
+        <button id="nav-toggle" class="px-3 py-2 border rounded text-gray-200 border-gray-200 hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+        </button>
+    </div>
+</nav>
+<div class="text-sm float-right bg-purple-600 hidden min-h-screen w-auto text-right px-4" id="nav-content">
+    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-gray-500 mr-4">
+        Home
+    </a>
+    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-gray-500 mr-4">
+        About
+    </a>
+    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-gray-500 mr-4">
+        Projects
+    </a>
+    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-gray-500 mr-4">
+        Blog
+    </a>
+</div>
+    <script>
+		//Javascript to toggle the menu
+		document.getElementById('nav-toggle').onclick = function(){
+			document.getElementById("nav-content").classList.toggle("hidden");
+		}
+	</script>

@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   purge: [],
   theme: {
@@ -5,4 +7,7 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
 }
