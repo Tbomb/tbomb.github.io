@@ -1,23 +1,20 @@
 ---
 layout: default.njk
 title: TommyHarding.com
+heading: Welcome,
 permalink: index.html
 ---
-# Welocome!
-
-## About Me
-
 My name is Tommy Harding,
 I am currently working on integrations at [TechStyle](https://techstylefashiongroup.com/)
 
-### Projects I Have Worked On
+Some projects I have worked on:
  * Integrate Google Analytics and Google Tab Manager to existing stores
  * Integrate 3rd Party reporting for marketing insight
  * [Savagex.com](https://www.savagex.com)
  * Payments Integrations
  * Segment and Confluent Integrations
 
-### Technologies I Use
+some of the technologies I Use:
  * Java
  * SQL
  * Node.js

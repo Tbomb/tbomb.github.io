@@ -11,10 +11,8 @@ title: TommyHarding.com
     <link href="/css/tailwind.css" rel="stylesheet"/>
   </head>
   <body>
-    {% include "partials/_header.njk" %}
-    <div id="content" class="flex px-8">
-      {{ content | safe }}
-    </div>
+    {% include "content.njk" %}
+
     {% include "partials/_footer.njk" %}
   </body>
 </html>

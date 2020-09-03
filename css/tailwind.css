@@ -1,3 +1,17 @@
 @tailwind base;
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"),
+        url("/css/fonts/Montserrat-Regular.woff") format("woff")
+        url("/css/fonts/Montserrat-Regular.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: local("Rubik"),
+        url("css/fonts/Rubik-VariableFontwght.woff") format("woff")
+        url("css/fonts/Rubik-VariableFontwght.woff2") format("woff2")
+}
 @tailwind components;
 @tailwind utilities;
