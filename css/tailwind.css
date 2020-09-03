@@ -10,8 +10,8 @@
 @font-face {
     font-family: "Rubik";
     src: local("Rubik"),
-        url("css/fonts/Rubik-VariableFontwght.woff") format("woff")
-        url("css/fonts/Rubik-VariableFontwght.woff2") format("woff2")
+        url("/css/fonts/Rubik-VariableFontwght.woff") format("woff")
+        url("/css/fonts/Rubik-VariableFontwght.woff2") format("woff2")
 }
 @tailwind components;
 @tailwind utilities;

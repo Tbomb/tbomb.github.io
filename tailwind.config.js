@@ -10,31 +10,32 @@ module.exports = {
         headerBold: ["Rubik", ...defaultTheme.fontFamily.sans],
         body: ["Montserrat", ...defaultTheme.fontFamily.sans],
       },
-      keyframes:{
-        animatedtext: {
-            from: {
-              'width': '0'
-            },
-            to: {
-              'width': '472px'
-            }
-        },
-        animatedcursor:{
-          from:{
-            'border-right-color': 'rgba(0,0,0,0)'
+      keyframes: {
+        "animate-text": {
+          from: {
+            width: "0",
           },
           to: {
-            'border-right-color': 'transparent'
-          }
-        }
+            width: "300px",
+          },
+        },
+        "animate-cursor": {
+          from: {
+            "border-bottom-color": "rgba(0,0,0,0)",
+          },
+          to: {
+            "border-bottom-color": "transparent",
+          },
+        },
       },
       animation: {
-        header: 'animatedtext 4s steps(29,end) 1s 1 normal both, animatedcursor 600ms steps(29,end) infinite'
-      }
+        typewriter: "animate-text 4s steps(30,end) 1s 1 normal both",
+        nextkey: "animate-cursor 600ms steps(30,end) infinite",
+      },
     },
   },
   variants: {},
-  plugins: [plugin(function ({ addUtilities }) {})],
+  plugins: [],
   future: {
     removeDeprecatedGapUtilities: true,
   },
