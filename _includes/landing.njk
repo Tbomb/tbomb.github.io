@@ -1,0 +1,26 @@
+---
+title: TommyHarding.com
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="/css/tailwind.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="bodywrapper" class="sm:w-full p-12 justify-center">
+      <div id="headerWrapper">
+        {% include "partials/_header.njk" %}
+      </div>
+      <div id="navWrapper">
+        {% include "partials/_nav.njk" %}
+      </div>
+      <div id="contentWrapper">
+        {% include "content.njk" %}
+      </div>
+      {% include "partials/_footer.njk" %}
+    </div>
+  </body>
+</html>

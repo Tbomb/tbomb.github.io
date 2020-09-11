@@ -3,7 +3,7 @@ const plugins = require("tailwindcss/plugin");
 const plugin = require("tailwindcss");
 
 module.exports = {
-  purge: [],
+  purge: ["./src/**/*.html", "./src/**/*.njk"],
   theme: {
     extend: {
       fontFamily: {
